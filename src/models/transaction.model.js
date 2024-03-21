@@ -28,6 +28,6 @@ const transactionSchema = mongoose.Schema({
 	},
 })
 
-const Transaction = mongoose.mdoel('Transaction', transactionSchema)
+const Transaction = mongoose.model('Transaction', transactionSchema)
 
 module.exports = Transaction
