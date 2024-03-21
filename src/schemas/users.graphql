@@ -4,6 +4,7 @@ type User {
 	name: String!
 	password: String!
 	gender: Gender
+	profilePicture: String
 	location: String
 	createdAt: String!
 	updatedAt: String!
@@ -15,10 +16,8 @@ enum Gender {
 }
 
 type Query {
-	users: [User!]
 	authUser: User
 	user(userId: ID!): User
-	test: String
 }
 
 type Mutation {
@@ -30,6 +29,7 @@ type Mutation {
 input SignUpInput {
 	username: String!
 	name: String!
+	profilePicture: String
 	password: String!
 	gender: String!
 }
