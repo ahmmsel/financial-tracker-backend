@@ -71,7 +71,7 @@ async function bootstrap() {
 		}),
 		express.json(),
 		expressMiddleware(server, {
-			context: async (req, res) => buildContext({ req, res }),
+			context: async ({ req, res }) => buildContext({ req, res }),
 		}),
 	)
 
