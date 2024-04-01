@@ -79,11 +79,11 @@ module.exports = {
 		logout: async (_, __, context) => {
 			try {
 				await context.logout()
-				req.session.destroy((error) => {
+				context.req.session.destroy((error) => {
 					if (error) throw error
 				})
 
-				res.clearCookie('connect.sid')
+				context.res.clearCookie('connect.sid')
 
 				return { message: 'Logged out successfully!' }
 			} catch (error) {
